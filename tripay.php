@@ -15,8 +15,8 @@ function createTripayTransaction($data) {
       'price'    => (int) $data['harga'],
       'quantity' => 1,
     ]],
-    'callback_url'   => 'https://yourdomain.com/callback.php',
-    'return_url'     => 'https://yourdomain.com/success.html',
+    'callback_url'   => 'https://habied03.github.io/GameLux//callback.php',
+    'return_url'     => 'https://habied03.github.io/GameLux/success.html',
     'signature'      => $signature,
   ];
 
