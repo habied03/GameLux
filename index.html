@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameLuxe Store</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h2 class="text-xl ">GAMELUXE STORE</h2>
+    </div>
+  </header>
+
+  <main>
+    <section class="game-list">
+      <h2>Pilih Game</h2>
+      <div class="games">
+        <div class="game-card" onclick="selectGame('ml')">
+          <img src="img/mlbb.jpeg" alt="Mobile Legends" />
+          <h3>Mobile Legends</h3>
+        </div>
+        <div class="game-card" onclick="selectGame('ff')">
+          <img src="img/ff.jpeg" alt="Free Fire" />
+          <h3>Free Fire</h3>
+        </div>
+        <div class="game-card" onclick="selectGame('pubg')">
+          <img src="img/pubg.jpeg" alt="PUBG Mobile" />
+          <h3>PUBG Mobile</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="topup-form">
+      <h2>Form Top Up</h2>
+      <form id="topupForm">
+        <label for="game">Game:</label>
+        <select id="game" name="game">
+          <option value="">Pilih Game</option>
+          <option value="ml">Mobile Legends</option>
+          <option value="ff">Free Fire</option>
+          <option value="pubg">PUBG Mobile</option>
+        </select>
+
+        <label for="game-id">ID Game + Server (Khusus ML) :</label>
+        <input type="text" id="gameId" required oninput="this.value = this.value.replace(/[^0-9()\s]/g, '')">
+
+        <label for="nominal">Nominal:</label>
+        <select id="nominal" name="nominal">
+          <option value="">Pilih Nominal</option>
+        </select>
+
+        <p id="price" class="price-display"></p>
+
+        <label for="payment">Metode Pembayaran:</label>
+        <select id="payment" name="payment">
+          <option value="">Pilih...</option>
+          <option value="gopay">GoPay</option>
+          <option value="dana">DANA</option>
+          <option value="ovo">OVO</option>
+          <option value="qris">QRIS</option>
+        </select>
+
+        <button type="submit">Top Up Sekarang</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; GameLuxe 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
